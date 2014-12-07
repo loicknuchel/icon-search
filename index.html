@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Icon search</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      body { margin-top: 70px; }
+    </style>
+  </head>
+  <body ng-controller="MainCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Icon search</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="card">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" placeholder="Search for icons" ng-model="search">
+        </div>
+      </div>
+      <div class="card">
+        <h1>Font-Awesome 4.2.0 icons <small>from <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">http://fortawesome.github.io/</a></small></h1>
+        <div class="row">
+          <div class="col-md-2" ng-repeat="icon in fontAwesome | filter:search">
+            <i class="fa" ng-class="icon.name" style="font-size: 20px;"></i> {{icon.name}}
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h1>Unicode icons <small>from <a href="http://unicode-table.com/fr/" target="_blank">unicode-table.com</a></small></h1>
+        <div class="row">
+          <div class="col-md-2" ng-repeat="icon in unicodes | filter:search">
+            <span style="font-size: 20px;">{{icon.char}}</span> {{icon.html}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/fontAwesome.js"></script>
+    <script src="scripts/unicode.js"></script>
+  </body>
+</html>
