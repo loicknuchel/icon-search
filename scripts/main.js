@@ -5,5 +5,5 @@ angular.module('app', [])
   $scope.unicodes = UnicodeSrv.all;
   
   $scope.fontAwesomeUrl = FontAwesomeSrv.getUrl;
-  $scope.UnicodeUrl = UnicodeSrv.getUrl;
+  $scope.unicodeUrl = UnicodeSrv.getUrl;
 });
