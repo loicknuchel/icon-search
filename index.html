@@ -40,7 +40,7 @@
         <h1>Font-Awesome 4.2.0 icons <small>from <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">http://fortawesome.github.io/</a></small></h1>
         <div class="row">
           <div class="col-md-2" ng-repeat="icon in fontAwesome | filter:search">
-            <a ng-href="fontAwesomeUrl(icon)" target="fontAwesome"><i class="fa" ng-class="icon.name" style="font-size: 20px;"></i></a> {{icon.name}}
+            <a ng-href="{{fontAwesomeUrl(icon)}}" target="fontAwesome"><i class="fa" ng-class="icon.name" style="font-size: 20px;"></i></a> {{icon.name}}
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
         <h1>Unicode icons <small>from <a href="http://unicode-table.com/fr/" target="_blank">unicode-table.com</a></small></h1>
         <div class="row">
           <div class="col-md-2" ng-repeat="icon in unicodes | filter:search">
-            <a ng-href="unicodeUrl(icon)" target="unicode" class="i">{{icon.char}}</a> {{icon.html}}
+            <a ng-href="{{unicodeUrl(icon)}}" target="unicode" class="i">{{icon.char}}</a> {{icon.html}}
           </div>
         </div>
       </div>
