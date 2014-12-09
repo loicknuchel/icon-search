@@ -329,7 +329,10 @@ angular.module('app')
     {char: '🙀', html: '&#128576;', unicode: 'U+1F640', tags: []}
   ];
   var service = {
-    all: all
+    all: all,
+    getUrl: function(icon){
+      return 'http://unicode-table.com/fr/'+icon.unicode.replace('U+', '')+'/';
+    }
   };
 
   return service;
