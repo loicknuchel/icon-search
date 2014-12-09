@@ -494,7 +494,10 @@ angular.module('app')
     {name: 'fa-youtube-square', tags: ['social']}
   ];
   var service = {
-    all: all
+    all: all,
+    getUrl: function(icon){
+      return icon.name.replace('fa-', '');
+    }
   };
 
   return service;
