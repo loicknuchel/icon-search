@@ -496,7 +496,7 @@ angular.module('app')
   var service = {
     all: all,
     getUrl: function(icon){
-      return icon.name.replace('fa-', '');
+      return 'http://fortawesome.github.io/Font-Awesome/icon/'+icon.name.replace('fa-', '')+'/';
     }
   };
 
