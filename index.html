@@ -11,6 +11,7 @@
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <style>
       body { margin-top: 70px; }
+      i, .i { display: inline-block; min-width: 25px; }
     </style>
   </head>
   <body ng-controller="MainCtrl">
@@ -41,7 +42,7 @@
         <h1>Unicode icons <small>from <a href="http://unicode-table.com/fr/" target="_blank">unicode-table.com</a></small></h1>
         <div class="row">
           <div class="col-md-2" ng-repeat="icon in unicodes | filter:search">
-            <span style="font-size: 20px;">{{icon.char}}</span> {{icon.html}}
+            <span class="i" style="font-size: 20px;">{{icon.char}}</span> {{icon.html}}
           </div>
         </div>
       </div>
